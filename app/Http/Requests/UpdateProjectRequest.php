@@ -30,7 +30,7 @@ class UpdateProjectRequest extends FormRequest
             'image' => 'nullable|url|max:255',
             'client' => 'nullable|max:30',
             'slug' => 'nullable',
-            'type_id' => 'nullable',
+            'type_id' => 'nullable|exists:types,id',
 
     ];
     }
@@ -44,7 +44,8 @@ public function messages()
                 'description.max' => 'La lunghezza massima è di 65535 caratteri',
                 'image.url' => 'Il valore inserito non è un URL valida. Inserire URL valida, es. https://ilmiosito.com',
                 'image.max' => 'La lunghezza massima è di 255 caratteri',
-                'client.max' => 'La lunghezza massima è di 30 caratteri'
+                'client.max' => 'La lunghezza massima è di 30 caratteri',
+                'type_id.exists' => 'Tipologia selezionata non esistente'
 
         ];
     }

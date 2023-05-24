@@ -19,7 +19,8 @@
                                 <th scope="row">{{ $project->id }}</th>
                                 <td>{{ $project->title }}</td>
                                 <td>{{ $project->client }}</td>
-                                <td>{{ $project->type }}</td>
+                                <td>{{ $project->type ? $project->type->name : 'Nessuna tipologia selezionata' }}
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
