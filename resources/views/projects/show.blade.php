@@ -13,6 +13,7 @@
                     <li class="list-group-item">Type: {{ $project->type }}</li>
                     <li class="list-group-item">Client: {{ $project->client }}</li>
                 </ul>
+                <h4>type: {{ $project->type ? $project->type->name : 'ciao' }}</h4>
                 <a class="btn btn-primary my-2" href="{{ route('admin.projects.index') }}">
                     Torna alla lista
                 </a>
