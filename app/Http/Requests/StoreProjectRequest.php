@@ -30,7 +30,7 @@ class StoreProjectRequest extends FormRequest
             'image' => 'nullable|url|max:255',
             'client' => 'nullable|max:30',
             'slug' => 'nullable',
-            'type' => 'nullable|max:50',
+            'type_id' => 'nullable',
 
     ];
 }
@@ -44,8 +44,7 @@ public function messages()
                 'description.max' => 'La lunghezza massima è di 65535 caratteri',
                 'image.url' => 'Il valore inserito non è un URL valida. Inserire URL valida, es. https://ilmiosito.com',
                 'image.max' => 'La lunghezza massima è di 255 caratteri',
-                'client.max' => 'La lunghezza massima è di 30 caratteri',
-                'type.max' => 'La lunghezza massima è di 50 caratteri'
+                'client.max' => 'La lunghezza massima è di 30 caratteri'
 
         ];
     }

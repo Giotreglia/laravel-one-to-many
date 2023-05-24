@@ -15,7 +15,7 @@ class Project extends Model
         'description',
         'image',
         'client',
-        'type',
+        'type_id',
         'slug'
     ];
 

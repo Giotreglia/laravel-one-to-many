@@ -40,10 +40,14 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="type" class="form-label">Tipologia</label>
-            <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type"
-                value="{{ old('type') }}">
-            @error('type')
+            <label for="type_id" class="form-label">Selezione tipologia</label>
+            <select class="form-select" @error('type_id') is-invalis @enderror name="type_id" id="type_id">
+                <option @selected(old('type_id') == '') value="">Nessuna categoria</option>
+                @foreach ($types as $type)
+                    <option @selected(old('type_id') == $type->id) value="{{ $type->id }}">{{ $type->name }}</option>
+                @endforeach
+            </select>
+            @error('type_id')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>

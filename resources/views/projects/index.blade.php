@@ -20,7 +20,7 @@
                     <th scope="row">{{ $project->id }}</th>
                     <td>{{ $project->title }}</td>
                     <td>{{ $project->client }}</td>
-                    <td>{{ $project->type }}</td>
+                    <td>{{ $project->type?->name }}</td>
                     <td>{{ $project->slug }}</td>
                     <td class="d-flex gap-1 justify-content-end">
                         <a class="btn btn-secondary" href="{{ route('admin.projects.show', $project->slug) }}">
